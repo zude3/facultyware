@@ -28,6 +28,9 @@ const sessionStore = new MySQLStore({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
+  schema: {
+    tableName: 'express_sessions',
+  },
 });
 
 app.use(session({

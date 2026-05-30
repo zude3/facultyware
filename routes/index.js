@@ -8,9 +8,15 @@ router.get("/", indexController.index);
 
 router.get("/home", isAuthenticated, indexController.home);
 
+router.get("/register", indexController.registerPage);
+
 router.get("/login", indexController.loginPage);
 
 router.post("/login", indexController.login);
+
+router.post("/register", indexController.register);
+
+router.get("/dashboard", isAuthenticated, indexController.dashboard);
 
 router.get("/logout", indexController.logout);
 
